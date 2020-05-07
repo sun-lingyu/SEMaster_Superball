@@ -4,6 +4,9 @@ using System.Collections;
 
 public class Ball : MonoBehaviour
 {
+    public GameObject Pre;
+    public GameObject Next;
+
     public GameObject ground;
 
     public Text countText;
@@ -39,6 +42,11 @@ public class Ball : MonoBehaviour
             transform.position = (ground.transform.right) * 2 + (ground.transform.up) * 2 + (ground.transform.forward) * 6;
             rb.velocity = new Vector3(0.0f, 0.0f, 0.0f);
             SetText();
+        }
+        if (other.gameObject.CompareTag("Cone"))
+        {
+            Pre.SetActive(false);
+            Next.SetActive(true);
         }
 
     }

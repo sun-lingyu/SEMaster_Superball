@@ -20,6 +20,5 @@ public class NextPage : MonoBehaviour
 	public void ClickButtonWithEvent() {
 		Pre.SetActive(false);
 		Next.SetActive(true);
-		
 	}
 }
